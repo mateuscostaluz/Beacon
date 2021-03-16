@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/beacon"
+        android:name="com.mateuscostaluz.presensor.ui.fragment.BeaconList"
+        android:label="beacon_list"
+        tools:layout="@layout/beacon_list">
+        <action
+            android:id="@+id/action_beacon_to_beaconDescription"
+            app:destination="@id/beaconDescription"
+            app:popUpTo="@id/beacon"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/beaconDescription"
+        android:name="com.mateuscostaluz.presensor.ui.fragment.BeaconDescription"
+        android:label="BeaconDescription">
+        <argument
+            android:name="beacon"
+            app:argType="com.mateuscostaluz.presensor.models.BeaconReceived" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.mateuscostaluz.presensor.ui.fragment.Login"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_beacon"
+            app:destination="@id/beacon"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUp"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.mateuscostaluz.presensorn.ui.fragment.SignUp"
+        android:label="SignUp" />
+</navigation>

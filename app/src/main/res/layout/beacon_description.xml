@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/beacon_description_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/beacon_description_exit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="8dp"
+                app:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_exit"
+                tools:ignore="VectorDrawableCompat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/beacon_description_cardview"
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#976200EE"
+
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/beacon_description_toolbar"
+        app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Cut">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/beacon_description_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_id_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="ID : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_id_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_id_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_disciplina_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Disciplina : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_id_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_disciplina_sigla_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sigla : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_disciplina_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_disciplina_sigla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POO"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_disciplina_sigla_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_disciplina_sigla_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_disciplina_nome_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_disciplina_sigla_label"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/beacon_description_disciplina_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POO"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_disciplina_nome_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_disciplina_nome_label" />
+
+            <TextView
+                android:id="@+id/beacon_description_sala_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Sala : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_disciplina_nome_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_sala_uuid_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UUID : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_sala_label"
+/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_sala_uuid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fda50693-a4e2-4fb1-afcf-c6eb07647825"
+                android:textColor="@android:color/white"
+
+                app:layout_constraintStart_toEndOf="@id/beacon_description_sala_uuid_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_sala_uuid_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_sala_numero_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numero : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_sala_uuid_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_sala_numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="408"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_sala_numero_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_sala_numero_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_diasemana_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Dia semana : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_sala_numero_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_diasemana_id_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_diasemana_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_diasemana_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_diasemana_id_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_diasemana_id_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_diasemana_dia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dia : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_diasemana_id_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_diasemana_dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quarta-Feira"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_diasemana_dia_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_diasemana_dia_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_horarioinicio_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario Inicio : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/beacon_description_diasemana_label"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_diasemana_dia_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_horarioinicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_horarioinicio_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_horarioinicio_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_horariofim_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario Fim : "
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/beacon_description_horarioinicio_label"
+                app:layout_constraintTop_toBottomOf="@id/beacon_description_horarioinicio_label" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/beacon_description_horariofim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:44:59"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toEndOf="@id/beacon_description_horariofim_label"
+                app:layout_constraintTop_toTopOf="@id/beacon_description_horariofim_label" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="45dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/beacon_description_confirm"
+        style="@style/Widget.Design.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#6200EE"
+        android:src="@drawable/ic_action_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@android:color/white" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
